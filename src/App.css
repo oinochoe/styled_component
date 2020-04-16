@@ -1,0 +1,18 @@
+@charset "utf-8";
+.button {
+    min-width:120px;
+    padding: 5px;
+    border:none;
+    border-radius:50px;
+    color:white;
+    font-weight:600;
+    appearance: none;
+}
+
+.button--success {
+    background-color:#2ecc71
+}
+
+.button--danger {
+    background-color:#ec1920
+}

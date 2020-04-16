@@ -34,6 +34,10 @@ const Container = styled.div`
     background-color: skyblue;
 `;
 
+const Anchor = styled(Button.withComponent('a'))`
+    text-decoration: none;
+`;
+
 class App extends Component {
     render() {
         return (
@@ -42,6 +46,7 @@ class App extends Component {
                 <Container>
                     <Button>Hello</Button>
                     <Button danger>Hello</Button>
+                    <Anchor href='https://google.com'>Go to google</Anchor>
                 </Container>
             </React.Fragment>
         );

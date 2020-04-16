@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-import './reset.css';
+import styled, { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
+    body {
+        padding: 0;
+        margin:0;
+        width:100%;
+        height:100vh;
+        background:blue;
+    }
+`;
 
 const Button = styled.button`
     min-width: 120px;
@@ -28,10 +37,13 @@ const Container = styled.div`
 class App extends Component {
     render() {
         return (
-            <Container>
-                <Button>Hello</Button>
-                <Button danger>Hello</Button>
-            </Container>
+            <React.Fragment>
+                <GlobalStyle />
+                <Container>
+                    <Button>Hello</Button>
+                    <Button danger>Hello</Button>
+                </Container>
+            </React.Fragment>
         );
     }
 }

@@ -74,6 +74,7 @@ const Container = styled.div`
     background-color: pink;
     ${Card}:last-child {
         background-color: blue;
+        /* you can using on darkmode */
     }
 `;
 

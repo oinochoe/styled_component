@@ -44,12 +44,6 @@ const Button = styled.button`
     }}
 `;
 
-const Container = styled.div`
-    height: 100vh;
-    width: 100%;
-    ${awesomeCard}
-`;
-
 const Anchor = styled(Button.withComponent('a'))`
     text-decoration: none;
 `;
@@ -72,6 +66,15 @@ const Input = styled.input.attrs({
 
 const Card = styled.div`
     background-color: red;
+`;
+
+const Container = styled.div`
+    height: 100vh;
+    width: 100%;
+    background-color: pink;
+    ${Card}:last-child {
+        background-color: blue;
+    }
 `;
 
 const Buttons = styled.button`

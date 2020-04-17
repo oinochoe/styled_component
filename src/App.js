@@ -29,7 +29,7 @@ const Button = styled.button`
     ${(props) => {
         if (props.danger) {
             return css`
-                animation: ${rotation} ${props.duration}s linear infinite;
+                animation: ${rotation} ${props.duration}s linear ${props.delay}s infinite;
             `;
         }
     }}
@@ -61,7 +61,7 @@ class App extends Component {
                 <GlobalStyle />
                 <Container>
                     <Button>Hello</Button>
-                    <Button danger duration={1}>
+                    <Button danger duration={1} delay={2}>
                         Hello
                     </Button>
                     <Anchor href='https://google.com'>Go to google</Anchor>

@@ -54,18 +54,25 @@ const rotation = keyframes`
     }
 `;
 
+const Input = styled.input.attrs({
+    required: true,
+})`
+    border-radius: 5px;
+`;
+
 class App extends Component {
     render() {
         return (
             <React.Fragment>
                 <GlobalStyle />
-                <Container>
+                <Input placeholder='hello' />
+                {/* <Container>
                     <Button>Hello</Button>
                     <Button danger duration={1} delay={2}>
                         Hello
                     </Button>
                     <Anchor href='https://google.com'>Go to google</Anchor>
-                </Container>
+                </Container> */}
             </React.Fragment>
         );
     }
